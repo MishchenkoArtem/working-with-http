@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FrontEnd HTTP</title>
+    </head>
+
+    <body class="page">
+        <section class="tickets">
+            <button class="tickets__button" type="button">Добавить тикет</button>
+            
+        </section>
+        <div class="modal" id="modal-ticket-add">
+            <form class="modal__form" name="modal-ticket-add">
+                <fieldset class="modal__fieldset">
+                    <legend class="modal__legend">Добавить тикет</legend>
+                    <label class="modal__label" for="short-description">Краткое описание</label>
+                    <input class="modal__input" type="text" id="short-description" name="short-description">
+                    <label class="modal__label" for="detailed-description">Подробное описание</label>
+                    <input class="modal__input" type="text" id="detailed-description" name="detailed-description">
+                </fieldset>
+                <div class="modal__wrapper">
+                    <button class="modal__button" type="button">Отмена</button>
+                    <button class="modal__button" type="submit">Ок</button>
+                </div>
+            </form>
+        </div>
+        <div class="modal">
+            <form class="modal__form" name="modal-ticket_edit">
+                <fieldset class="modal__fieldset">
+                    <legend class="modal__legend">Изменить тикет</legend>
+                    <label class="modal__label" for="short-description">Краткое описание</label>
+                    <input class="modal__input" type="text" id="short-description" name="short-description">
+                    <label class="modal__label" for="detailed-description">Подробное описание</label>
+                    <input class="modal__input" type="text" id="detailed-description" name="detailed-description">
+                </fieldset>
+                <div class="modal__wrapper">
+                    <button class="modal__button" type="button">Отмена</button>
+                    <button class="modal__button" type="submit">Ок</button>
+                </div>
+            </form>
+        </div>
+        <div class="modal">
+            <form class="modal__form" name="modal-delete-ticket">
+                <fieldset class="modal__fieldset">
+                    <legend class="modal__legend">Удалить тикет</legend>
+                    <p class="modal__text">
+                        Вы уверены, что хотите удалить тикет? <br /> 
+                        Это действие необратимо
+                    </p>
+                </fieldset>
+                <div class="modal__wrapper">
+                    <button class="modal__button" type="button">Отмена</button>
+                    <button class="modal__button" type="submit">Ок</button>
+                </div>
+            </form>
+        </div>
+        <template class="tickets__tempalte">
+            <div class="tickets__container">
+                <input class="tickets__checkbox" type="checkbox">
+                <p class="tickets__text"></p>
+                <time class="tickets__date" datetime=""></time>
+                <div class="tickets__wrapper">
+                    <a class="tickets__button-edit" href="#0"></a>
+                    <a class="tickets__button-delete" href="#0"></a>
+                </div>
+            </div>
+        </template>
+    </body>
+
+</html>
