@@ -1,24 +1,20 @@
 import { newPostTicket } from './api.js';
-import { 
+import {
     inputDescription,
     inputDetailedDescription,
     formAddTicket,
     tickets,
-    ticketsTempalte
+    ticketsTempalte,
 } from './constans.js';
 
-formAddTicket.addEventListener('submit', (event) => {
-    event.preventDefault();
-    console.log('101');
-    
+formAddTicket.addEventListener('submit', () => {
     newPostTicket(inputDescription.value, inputDetailedDescription.value)
-      .then((res) => {
-        console.log(res);
-        createTicket(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+        .then((res) => {
+            createTicket(res);
+        })
+        .catch((err) => {
+            console.log(err);
+        });
 });
 
 export const createTicket = (res) => {
@@ -31,4 +27,4 @@ export const createTicket = (res) => {
     textElement.textContent = res.value;
 
     tickets.append(ticketElement);
-}
+};
